@@ -9,6 +9,7 @@ func bitwiseAndSolution(n: Int, k: Int) -> Int {
 
     for i in 1...(n - 1) {
         for j in (i + 1)...n {
+            
             guard i & j < k else { continue }
 
             result = max(result, i & j)
