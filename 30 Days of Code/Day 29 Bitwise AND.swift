@@ -1,4 +1,4 @@
-//Problem definition: 
+//Problem definition: https://www.hackerrank.com/challenges/30-bitwise-and/problem
 
 import Foundation
 
