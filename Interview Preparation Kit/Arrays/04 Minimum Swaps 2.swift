@@ -10,18 +10,21 @@ func minimumSwaps(array: [Int]) -> Int {
     
     var array = array
     var swapCount = 0
-
+    
     for i in 0..<array.count {
-        for j in 0..<array.count {
-            if i != j && array[j] == i + 1 {
-                array.swapAt(i, j)
-                swapCount += 1
+        if i+1 != array[i] {
+            var j = i
+            while array[j] != i+1 {
+                j += 1
             }
+            
+            array.swapAt(i, j)
+            swapCount += 1
         }
     }
+    
     return swapCount
 }
-
 
 let result = minimumSwaps(array: array)
 print(result)
